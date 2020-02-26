@@ -548,9 +548,10 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
 - (void)application:(UIApplication*)application
 didReceiveLocalNotification:(UILocalNotification*)notification {
-    if(@available(iOS 10.0, *)) {
-        return;
-    }
+	// I think this is not needed.
+//     if(@available(iOS 10.0, *)) {
+//         return;
+//     }
     if(![self isAFlutterLocalNotification:notification.userInfo]) {
         return;
     }
